@@ -2,9 +2,9 @@
 public class FrogRiverOne {
 
     public static int earliestTime(int X, int[] A) {
-        for (int i = 0; i < A.length; i++) {
-            if (A[i] == X) {
-                return i;
+        for (int i = 0; i < A.length; i++) { // iterate through each element in the array
+            if (A[i] == X) { // check if the element matches X
+                return i;   // Return the index if found
             }
         }
         return -1; // Not all positions covered

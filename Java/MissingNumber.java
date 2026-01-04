@@ -14,10 +14,10 @@ public class MissingNumber {
             return 1;
         }
 
-        // Step 1: Sort the array
+        // Sort the array
         Arrays.sort(arr);
 
-        // Step 2: Check each position
+        // Check each position
         for (int i = 0; i < arr.length; i++) {
             // Expected number at this index is i + 1
             if (arr[i] != i + 1) {
@@ -25,7 +25,7 @@ public class MissingNumber {
             }
         }
 
-        // Step 3: If no missing number in the loop,
+        // If no missing number in the loop,
         // then it's the last number (N+1)
         return arr.length + 1;
     }

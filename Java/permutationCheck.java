@@ -6,19 +6,21 @@ import java.util.stream.Collectors;
 public class permutationCheck {
 
     public static int isPermutation(int[] A) {
-        int n = A.length;
+        int n = A.length; // Length of the array
 
-        Set<Integer> set = Arrays.stream(A)
+        // Collect unique elements into a set by converting the array to a set 
+        // to remove duplicates 
+        Set<Integer> set = Arrays.stream(A) 
                 .boxed()
                 .collect(Collectors.toSet());
-        int diff = set.size() - n;
-        if (diff != 0) {
-            return 0;
+        int diff = set.size() - n; // Compare size of set with length of array
+        if (diff != 0) { // If sizes differ, not a permutation
+            return 0; 
         }
 
-        Arrays.sort(A);
-        for (int i = 0; i < n; i++) {
-            if (A[i] != i + 1) {
+        Arrays.sort(A); // Sort the array
+        for (int i = 0; i < n; i++) { // Check if each element matches its expected value
+            if (A[i] != i + 1) { // Expected value is i + 1
                 return 0; // Not a permutation
             }
         }

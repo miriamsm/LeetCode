@@ -4,24 +4,24 @@ import java.util.*;
 public class countUnique {
 
     public static int count(int[] arr) {
-        HashMap<Integer, Integer> freq = new HashMap<>();
+        HashMap<Integer, Integer> freq = new HashMap<>(); // hashmap to store frequency of each element
 
-        for (int i = 0; i < arr.length; i++) {
-            if (freq.containsKey(arr[i])) {
-                freq.put(arr[i], freq.get(arr[i]) + 1);
+        for (int i = 0; i < arr.length; i++) { // iterate through each element in the array
+            if (freq.containsKey(arr[i])) { // if element is already in hashmap, increment its count
+                freq.put(arr[i], freq.get(arr[i]) + 1); // increment count
             } else {
-                freq.put(arr[i], 1);
+                freq.put(arr[i], 1); // else, add element to hashmap with count 1
             }
         }
 
-        int count = 0;
-        for (int value : freq.values()) {
-            if (value == 1) {
-                count++;
+        int count = 0; // initialize count of unique elements
+        for (int value : freq.values()) { // iterate through the frequency values
+            if (value == 1) { // if frequency is 1, it's a unique element
+                count++; // increment unique count
             }
         }
 
-        return count;
+        return count; // return the count of unique elements
     }
 
     public static void main(String[] args) {

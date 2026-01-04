@@ -2,8 +2,8 @@
 public class FrogRiverSimple {
 
     public static int findXIndex(int X, int[] A) {
-        for (int i = 0; i < A.length; i++) {
-            if (A[i] == X) {
+        for (int i = 0; i < A.length; i++) { // iterate through each element in the array
+            if (A[i] == X) { // check if the element matches X
                 return i; // Found X, return its index
             }
         }
